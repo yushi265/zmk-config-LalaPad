@@ -193,9 +193,9 @@
 
             bindings = <
 &kp TAB           &kp Q         &kp W             &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I            &kp O       &kp P       &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A         &kp S             &kp D            &kp F        &kp G          &kp H          &kp J        &kp K            &kp L       &lt 7 SEMI  &kp ENTER
+&kp LEFT_CONTROL  &kp A         &kp S             &kp D            &kp F        &kp G          &kp H          &kp J        &kp K            &kp L       &lt 5 SEMI  &kp ENTER
 &kp LSHFT         &kp Z         &kp X             &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA        &kp PERIOD  &kp SLASH   &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE      &lt 1 SPACE  &lt 4 LANG2    &lt 5 LANG1    &lt 2 SPACE  &lt 1 SPACE      &none       &none       &ctrlspace
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE      &lt 1 SPACE  &lt 7 LANG2    &lt 3 LANG1    &lt 2 SPACE  &lt 1 SPACE      &none       &none       &ctrlspace
                                 &allow_end        &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
             >;
         };
@@ -217,30 +217,6 @@
 &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &kp ESC  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        SECONDARY_LAYER {
-            display-name = "secondary_layer";
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
-
-            bindings = <
-&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans     &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
-                         &trans        &trans        &trans        &trans        &trans         &trans           &trans           &trans
-            >;
-        };
-
-        TERTIARY_LAYER {
-            display-name = "tertiary_layer";
-            bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4      &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9      &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14     &kp F15  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &kp ESCAPE  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                 &trans   &trans   &trans      &trans   &trans  &trans  &trans  &trans
             >;
         };
 
@@ -275,6 +251,30 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans
+            >;
+        };
+
+        SECONDARY_LAYER {
+            display-name = "secondary_layer";
+            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
+
+            bindings = <
+&kp TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
+&trans     &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
+&trans     &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
+&trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
+                         &trans        &trans        &trans        &trans        &trans         &trans           &trans           &trans
+            >;
+        };
+
+        TERTIARY_LAYER {
+            display-name = "tertiary_layer";
+            bindings = <
+&trans  &kp F1   &kp F2   &kp F3   &kp F4      &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9      &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14     &kp F15  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans   &trans   &kp ESCAPE  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans   &trans   &trans      &trans   &trans  &trans  &trans  &trans
             >;
         };
     };
