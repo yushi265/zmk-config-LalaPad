@@ -192,11 +192,11 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp TAB           &kp Q         &kp W             &kp E            &kp R        &kp T          &kp Y          &kp U        &kp I            &kp O       &kp P       &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A         &kp S             &kp D            &kp F        &kp G          &kp H          &kp J        &kp K            &kp L       &lt 6 SEMI  &kp ENTER
-&kp LSHFT         &kp Z         &kp X             &kp C            &kp V        &kp B          &kp N          &kp M        &kp COMMA        &kp PERIOD  &kp SLASH   &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE      &lt 1 SPACE  &lt 8 LANG2    &lt 3 LANG1    &lt 2 SPACE  &lt 1 SPACE      &none       &none       &ctrlspace
-                                &allow_end        &allow_pagedown  &allow_home  &allow_pageup  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
+&kp TAB           &kp Q         &kp W             &kp E        &kp R            &kp T        &kp Y          &kp U        &kp I            &kp O       &kp P       &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A         &kp S             &kp D        &kp F            &kp G        &kp H          &kp J        &kp K            &kp L       &lt 6 SEMI  &kp ENTER
+&kp LSHFT         &kp Z         &kp X             &kp C        &kp V            &kp B        &kp N          &kp M        &kp COMMA        &kp PERIOD  &kp SLASH   &kp RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 1 SPACE      &lt 0 LANG2  &lt 3 LANG1    &lt 2 SPACE  &lt 1 SPACE      &none       &none       &ctrlspace
+                                &allow_pageup     &allow_end   &allow_pagedown  &allow_home  &allow_pageup  &allow_home  &allow_pagedown  &allow_end
             >;
         };
 
@@ -274,17 +274,6 @@
 &trans     &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
 &trans     &trans        &trans        &trans        &trans        &kp CAPS      &trans         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
                          &trans        &trans        &trans        &trans        &trans         &trans           &trans           &trans
-            >;
-        };
-
-        TERTIARY_LAYER {
-            display-name = "tertiary_layer";
-            bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4      &kp F5   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9      &kp F10  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14     &kp F15  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &kp ESCAPE  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                 &trans   &trans   &trans      &trans   &trans  &trans  &trans  &trans
             >;
         };
     };
