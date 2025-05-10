@@ -25,7 +25,7 @@
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
         //<&zip_xy_scaler 6 2>,,,,,,,
         //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,
-        <&zip_xy_scaler 9 2>;
+        <&zip_xy_scaler 8 2>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
