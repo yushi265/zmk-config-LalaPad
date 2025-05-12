@@ -23,16 +23,16 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        //<&zip_xy_scaler 6 2>,,,,,,,
-        //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,
+        //<&zip_xy_scaler 6 2>,,,,,,,,
+        //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,
         <&zip_xy_scaler 8 2>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            //<&zip_xy_scaler 3 5>,,,,,,,
-            //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,
+            //<&zip_xy_scaler 3 5>,,,,,,,,
+            //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,
             <&zip_xy_scaler 5 5>;
     };
 
@@ -204,18 +204,18 @@
 &kp TAB           &kp Q         &kp W             &kp E        &kp R         &kp T                   &kp Y                   &kp U        &kp I            &kp O       &kp P        &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A         &kp S             &kp D        &kp F         &kp G                   &kp H                   &kp J        &lt 5 K          &lt 5 L     &lt 6 SEMI   &lt 4 ENTER
 &kp LSHFT         &kp Z         &kp X             &kp C        &kp V         &kp B                   &kp N                   &kp M        &kp COMMA        &kp PERIOD  &lt 8 SLASH  &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 1 SPACE   &lt 3 LS(LG(NUMBER_4))  &lt 3 LS(LG(NUMBER_5))  &lt 2 SPACE  &lt 1 SPACE      &sl 3       &none        &ctrlspace
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &lt 9 SPACE   &lt 3 LS(LG(NUMBER_4))  &lt 3 LS(LG(NUMBER_5))  &lt 2 SPACE  &lt 1 SPACE      &sl 3       &none        &ctrlspace
                                 &kp LEFT_GUI      &mkp MB5     &kp LEFT_GUI  &mkp MB4                &allow_pageup           &allow_home  &allow_pagedown  &allow_end
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5         &kp N6     &kp N7      &kp N8      &kp N9        &kp N0        &trans
-&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(MINUS)  &kp MINUS  &kp LS(N9)  &kp LS(N0)  &kp LS(APOS)  &kp APOS      &trans
-&trans  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(EQUAL)  &kp EQUAL  &kp LBKT    &kp RBKT    &kp LS(LBKT)  &kp LS(RBKT)  &trans
-&trans  &trans      &trans      &trans      &trans      &trans         &trans     &trans      &trans      &trans        &trans        &trans
-                    &trans      &trans      &trans      &trans         &trans     &trans      &trans      &trans
+&kp GRAVE      &kp N1      &kp N2      &kp N3      &kp N4      &kp N5         &kp N6     &kp N7      &kp N8      &kp N9        &kp N0        &trans
+&kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(MINUS)  &kp MINUS  &kp LS(N9)  &kp LS(N0)  &kp LS(APOS)  &kp APOS      &trans
+&trans         &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(EQUAL)  &kp EQUAL  &kp LBKT    &kp RBKT    &kp LS(LBKT)  &kp LS(RBKT)  &trans
+&trans         &trans      &trans      &trans      &trans      &trans         &trans     &trans      &trans      &trans        &trans        &trans
+                           &trans      &trans      &trans      &trans         &trans     &trans      &trans      &trans
             >;
         };
 
@@ -293,6 +293,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+            >;
+        };
+
+        NUM_PAD {
+            bindings = <
+&trans  &kp KP_PLUS   &kp KP_MINUS  &kp N7  &kp N8  &kp N9        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_SLASH  &kp KP_DOT    &kp N4  &kp N5  &kp N6        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &kp N0        &kp N1  &kp N2  &kp N3        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans  &trans  &kp KP_EQUAL  &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans        &trans  &trans  &trans        &trans  &trans  &trans  &trans
             >;
         };
     };
