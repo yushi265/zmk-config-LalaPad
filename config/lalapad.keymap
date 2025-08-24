@@ -23,16 +23,16 @@
 &glidepoint_listener_R {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        //<&zip_xy_scaler 6 2>,,,,,,,,,,,,,,,,,,,,
-        //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,,,,,,,,,,,,,
+        //<&zip_xy_scaler 6 2>,,,,,,,,,,,,,,,,,,,,,
+        //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 8 2>;
 
     lowspeedmode {
         layers = <SECONDARY_LAYER>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            //<&zip_xy_scaler 3 5>,,,,,,,,,,,,,,,,,,,,
-            //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,,,,,,,,,,,,,
+            //<&zip_xy_scaler 3 5>,,,,,,,,,,,,,,,,,,,,,
+            //<&zip_temp_layer MOUSE_R_LAYER 500>;,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_scaler 5 5>;
     };
 
@@ -202,7 +202,7 @@
 
             bindings = <
 &kp TAB           &kp Q         &kp W             &kp E        &kp R         &kp T            &kp Y                   &kp U          &kp I            &kp O       &kp P        &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A         &kp S             &kp D        &kp F         &kp G            &kp H                   &kp J          &lt 4 K          &kp L       &lt 5 SEMI   &kp ENTER
+&kp LEFT_CONTROL  &kp A         &kp S             &kp D        &kp F         &kp G            &kp H                   &kp J          &lt 5 K          &kp L       &lt 4 SEMI   &kp ENTER
 &kp LSHFT         &kp Z         &kp X             &kp C        &kp V         &kp B            &kp N                   &kp M          &kp COMMA        &kp PERIOD  &lt 7 SLASH  &kp RIGHT_SHIFT
 &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_COMMAND  &lt 2 SPACE  &kp ENTER     &lt 3 LG(SPACE)  &lt 3 LS(LG(NUMBER_5))  &kp BACKSPACE  &lt 1 ENTER      &sl 3       &none        &ctrlspace
                                 &kp LEFT_GUI      &mkp MB5     &kp LEFT_GUI  &mkp MB4         &allow_pageup           &allow_home    &allow_pagedown  &allow_end
@@ -242,6 +242,16 @@
             >;
         };
 
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB1       &mkp RCLK  &kp LG(W)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB5  &commandclick  &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans     &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans
+            >;
+        };
+
         SCROLL_R_LAYER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -249,16 +259,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &mkp MB1       &mkp RCLK  &kp LG(W)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp MB5  &commandclick  &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans     &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans         &trans     &trans
             >;
         };
 
